@@ -1,14 +1,20 @@
-<!--	<style type="text/css">
-		#lol {
-			border: 1px solid black;
-		}
-		td {
-			border: 1px solid black;
-		}
-	</style> -->
-
-
-
-
-
-New branch changes
+1) git init - створення локального репозиторію в папці "repository 2"
+2) створення репозиторію second-repository на профілі GitHub
+3) git remote add second-repository git://github.com/kobryn-mykhailo/second-repository.git - 
+приєднання локального репозиторію до репозиторію на GitHub
+4) створення файлу commands.txt з будь-яким контентом в папці локального репозиторію
+5) git add commands.txt - додаємо файл до списку відслідковуваних у репозиторії (tracked)
+6) git commit -a -m"added first file - commands.txt" - проводимо коміт доданого файлу з коментарем "added first file - commands.txt"
+7) git pull second-repository master - проводимо pull репозиторію second-repository (pull необхідно провести, щоб отримати проект зі всіма внесеними до цього часу правками)
+8) git commit -a -m "pull and merge" - робимо коміт попередньої дії. Гілки локального і віддаленого репозиторіїв зливаються
+9) git push https://github.com/kobryn-mykhailo/second-repository.git master
+  173  git commands - робимо push з локального серверу. В GitHub master з'являється файл commands.txt 
+10) git checkout -b new-brabch - створення нової гілки (new-branch) і перехід на неї відразу
+11) git checkout master - це перехід на гілку master (для практикування)
+12) git checkout new-branch - перехід назад на гілку new-branch (для практикування)
+13) додаємо у файл commands.txt текст "new branch changes"
+14) git commit -a -m "changes to the file commands" - комітимо зміни з коментарем "new branch changes"
+15) git push https://github.com/kobryn-mykhailo/second-repository.git new-branch - проводимо push з гілки new-branch, в GitHub створюється гілка new-branch, на якій відображені зміни
+16) git checkout master - переключаємось назад на гілку master
+17) git merge new-branch - мерджимо гілку new-branch на гілку master
+18) git push https://github.com/kobryn-mykhailo/second-repository.git master - робимо push локальної гілки master на гілку master GitHub
